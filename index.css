@@ -1,0 +1,1313 @@
+@font-face {
+    font-family: 'Neue Montreal';
+    src: local('Neue Montreal Regular'), 
+        url('font/NeueMontreal-Regular.woff2') format('woff2'),
+        url('font/NeueMontreal-Regular.woff') format('woff'),
+        url('font/NeueMontreal-Regular.ttf') format('truetype');   
+    font-weight: 400;
+    font-style: normal ;
+  }
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: local('Neue Montreal Italic'),
+        url('font/NeueMontreal-Italic.woff2') format('woff2'),
+        url('font/NeueMontreal-Italic.woff') format('woff'),
+        url('font/NeueMontreal-Italic.ttf') format('truetype');    
+    font-weight: 400;
+    font-style: italic;
+  }
+ 
+  /*ОБНУЛЕНИЕ РАЗМЕТКИ*/
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BFE55E;
+  border-radius: 5px;
+  width: 5px;
+}
+
+/*Настройка контейнера*/
+
+html, body {
+  scrollbar-color: #BFE55E #202020;
+}
+body {
+  font-family: 'Neue Montreal', sans-serif;
+  background-color: #202020;
+}
+
+.container {
+  width: 100vw;
+  padding-top: 4vh;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+  
+/*Блок Хедер*/
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav .dropbtn {
+  display: none;
+}
+
+.logo {
+  font-size: 30px;
+  line-height: 36px;
+  color: #CBCBCB;
+  text-decoration: none;
+}
+
+.n {
+  display: flex;
+  font-size: 18px;
+  width: 40vw;
+  line-height: 22px;
+  justify-content: space-between;
+}
+.n1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  width: 115px;
+  border: 1px solid #BFE55E;
+  border-radius: 30px;
+  } 
+  .n1:hover {
+    border: 3px solid #BFE55E;
+    color: rgb(211, 199, 199);
+  }
+
+  .location {
+    display: flex;
+    justify-content: end;
+    margin-top: 2vh;
+    font-size: 18px;
+    line-height: 22px;
+    font-style: italic;
+    color: #CBCBCB;
+  }
+
+  .name {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .name h1 {
+    font-size: 130px;
+    line-height: 156px;
+    width: auto;
+    color: #BFE55E;
+    text-transform:uppercase;
+    user-select: none;
+  }
+  .name p {
+    font-size: 37px;
+    line-height: 44px;
+    color: #ffffff;
+    width: 40vw;
+    text-transform:uppercase;
+  }
+
+  .imghead {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100vw;
+  }
+
+  .wwu {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+ .workwithus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #BFE55E;
+    border-radius: 30px;
+    text-transform: uppercase;
+  }
+  .workwithus:hover {
+    border: 3px solid #BFE55E;
+    color: rgb(211, 199, 199);
+  }
+    
+  .arrow {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 20px auto auto;
+  }
+  .arrow:before,
+  .arrow:after {
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border-left: 1px solid #CBCBCB;
+      border-bottom: 1px solid #CBCBCB;
+      animation: arrow-8 2s linear infinite;
+  }
+  .arrow:after {
+      animation: arrow-8 2s linear infinite -1s;
+  }
+  
+  @keyframes arrow-8 {
+      0% {
+          opacity: 0;
+          transform: translate(0, -23px) rotate(-45deg);
+      }
+      10%, 90% {
+          opacity: 0;
+      }
+      50% {
+          opacity: 1;  
+          transform: translate(0, 0) rotate(-45deg);
+      }
+      100% {
+          opacity: 0;
+          transform: translate(0, 23px) rotate(-45deg);
+      }
+  }
+  
+  /*Блок About*/
+
+  .about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+
+  .leftabout {
+    width: 39vw;
+  }
+  .leftabout h2 {
+    font-size: 60px;
+    line-height: 72px;
+    text-transform: uppercase;
+    color: #BFE55E;
+  }
+  .leftabout p {
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #CBCBCB;
+    margin-top: 70px;
+  }
+  .leftabout img {
+    width: 40vw;
+    margin-top: 70px;
+  }
+
+  .rightabout {
+    width: 39vw;
+  }
+  .rightabout p {
+    font-size: 30px;
+    line-height: 36px;
+    color: #ffffff;
+  }
+  .rightabout img {
+    width: 40vw;
+    margin-top: 70px;
+  }
+  .rightabout div {
+    font-size: 30px;
+    line-height: 36px;
+    color: #CBCBCB;
+    margin-top: 70px;
+  }
+
+  /*Блок Advantages*/
+
+  .advantages h2 {  
+    font-size: 60px;
+    line-height: 72px;
+    text-transform: uppercase;
+    color: #BFE55E;
+  }
+
+  .advinfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 160px;
+  }
+
+  .advinfo1 {
+    width: 40vw;
+    margin-top: 70px;
+    padding-top: 70px;
+    border-top: 1px solid #F3FFCE;
+    font-size: 40px;
+    line-height: 48px;
+    color: #CBCBCB;
+    text-transform: uppercase;
+  }
+
+  .advinfo2 {
+    width: 40vw;
+    margin-top: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #F3FFCE;
+    border-bottom: 1px solid #F3FFCE;
+    color: #ffffff;
+  }
+  
+  .advinfo2 ol li:nth-child(odd) {
+    font-size: 20px;
+    line-height: 24px;
+    font-style: italic;
+    color:gray;
+    cursor: pointer;
+  }
+  .advinfo2 ol li:nth-child(even) {
+    font-size: 30px;
+    line-height: 36px;
+    color:rgb(255, 255, 255);
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+ .advinfo2 ol li:nth-child(even):hover {
+  color:#BFE55E;
+ }
+  
+  /*Блок IT squad in numbers*/
+
+  .ISiN h2 {
+    font-size: 60px;
+    line-height: 72px;
+    text-transform: uppercase;
+    color: #BFE55E;
+  }
+
+  .numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 160px;
+  }
+  
+  .num1 {
+    font-size: 30px;
+    line-height: 36px;
+    width: 40vw;
+    margin-top: 70px;
+    color: #CBCBCB;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #F3FFCE;
+  }
+  .num1:nth-child(odd) {
+    text-align: end;
+  }
+  .num1 h3 {
+    font-size: 40px;
+    line-height: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  /*Блок Services*/
+
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 160px;
+  }
+  .services h2 {
+    font-size: 60px;
+    line-height: 72px;
+    text-transform: uppercase;
+    color: #BFE55E;
+  }
+  .services p {
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #CBCBCB;
+    width: 40vw;
+  }
+  
+  .srvs {
+    width: 100vw;
+    margin-top: 70px;
+  }
+  .srvs .li1 {
+    border-top: 1px solid #F3FFCE;
+    padding-top: 20px;
+    
+  }
+  .srvs .li1:last-child {
+    border-bottom: 1px solid #F3FFCE;
+  }
+  
+  .srvs li:nth-child(odd) {
+    font-size: 20px;
+    line-height: 24px;
+    font-style: italic;
+    color:gray;
+    cursor: pointer;
+  }
+  .srvs li:nth-child(even) {
+    font-size: 30px;
+    line-height: 36px;
+    color:rgb(255, 255, 255);
+    margin-left: 50px;
+    margin-top: 6px;
+    margin-bottom: 40px;
+  }
+ .srvs li:nth-child(even):hover {
+  color:#BFE55E;
+ }
+
+ /*Блок StagesOfWork*/
+
+ .StagesOfWork {
+  margin-bottom: 160px;
+}
+.StagesOfWork h2 {
+  font-size: 60px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #BFE55E;
+}
+.StagesOfWork p {
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #CBCBCB;
+  width: 40vw;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.stages {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+.stages .li2 {
+  border-top: 1px solid #F3FFCE;
+  padding-top: 20px;
+  width: 24vw;
+  
+}
+
+.stages li:nth-child(odd) {
+  font-size: 20px;
+  line-height: 24px;
+  font-style: italic;
+  color:gray;
+  cursor: pointer;
+}
+.stages li:nth-child(even) {
+  font-size: 30px;
+  line-height: 36px;
+  color:rgb(255, 255, 255);
+  margin-left: 50px;
+  margin-top: 6px;
+  margin-bottom: 70px;
+}
+.stages li:nth-child(even):hover {
+color:#BFE55E;
+}
+
+/*Блок The Team*/
+
+.TheTeam {
+  margin-bottom: 160px;
+}
+.TheTeam h2 {
+  font-size: 60px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #BFE55E;
+}
+
+.teamcontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.imgteam1 {
+  width: 24vw;
+  margin-right: 100px;
+}
+
+.TheTeam .pteam1 {
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #CBCBCB;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.TheTeam .pteam2 {
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+/*Блок Our Customers*/
+
+.OurCustomers {
+  margin-bottom: 185px;
+}
+
+.OurCustomers h2 {
+  font-size: 60px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #BFE55E;
+}
+
+.OurCustomers p {
+  font-size: 40px;
+  line-height: 48px;
+  width: 40vw;
+  text-transform: uppercase;
+  color: #CBCBCB;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.link {
+  font-size: 30px;
+  line-height: 36px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.customers {
+  position: relative;
+}
+.link li {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid #F3FFCE;
+}
+.link .lastlist {
+  border-bottom: 1px solid #F3FFCE;
+}
+.customersimg {
+  position: absolute;
+  filter: grayscale(100%);
+}
+.i1 {
+  left: 36%;
+  top: -1.18%;
+}
+.i2 {
+  left: 47%;
+  top: 17%;
+}
+.i3 {
+  left: 47%;
+  top: 35.18%;
+}
+.i4 {
+  left: 55%;
+  top: 53.36%;
+}
+.i5 {
+  left: 36%;
+  top: 71.54%;
+}
+.i6 {
+  left: 55%;
+  top: 89.72%;
+}
+
+.link:hover img {
+  filter: none;
+}
+.link:hover {
+  color: #BFE55E;
+}
+
+/*Блок Footer*/
+
+.consultation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 160px;
+}
+.consultation h2 {
+  font-size: 60px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #BFE55E;
+  margin-bottom: 70px;
+}
+.consultation a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color:#FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #BFE55E;
+  border-radius: 30px;
+  width: 346px;
+  height: 40px;  
+}
+.consultation a:hover {
+  border: 3px solid #BFE55E;
+  color: rgb(211, 199, 199);
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-top: 1px solid #CBCBCB;
+  border-bottom: 1px solid #CBCBCB;
+}
+.contacts h2 {
+  font-size: 60px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #BFE55E;
+}
+
+.contacts p {
+  font-size: 40px;
+  line-height: 48px;
+  width: 40vw;
+  text-transform: uppercase;
+  color: #CBCBCB;
+  margin-bottom: 70px;
+}
+
+.adress {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  width: 100vw;
+  margin-bottom: 70px;
+}
+.adress .socialweb a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.adress .socialweb a:hover {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.backlink {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.backlink a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 22px;
+  color:#BFE55E;
+  text-decoration: none; 
+}
+.contacts a:hover {
+  font-size: 19px;
+}
+
+.footer .ending {
+  text-align: 15px;
+  line-height: 18px;
+  color: #CBCBCB;
+  text-align: end;
+}
+
+ @media screen and (max-width: 1439px) {
+  .name h1 {
+    font-size: 120px;
+  }
+  .name p {
+    font-size: 33px;
+  }
+}
+
+@media screen and (max-width: 1149px) {
+  .logo {
+    font-size: 25px;
+  }
+  .n1 {
+    font-size: 15px;
+    width: 90px;
+  }
+  .location {
+    font-size: 14px;
+  } 
+  .name h1 {
+    font-size: 95px;
+  }
+  .name p {
+    font-size: 21px;
+    line-height: 30px ;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  /*Блок Nav*/
+
+  .logo {
+    font-size: 23px;
+  }
+  .n1 {
+    font-size: 12px;
+    width: 75px;
+  }
+  .location {
+    font-size: 13px;
+  } 
+  .name h1 {
+    font-size: 70px;
+  }
+  .name p {
+    font-size: 18px;
+    line-height: 25px ;
+  }
+
+ /*Блок about*/
+  .about {
+    margin-bottom: 90px;
+  }
+  .leftabout h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .leftabout p {
+    font-size: 23px;
+    line-height: 28px;
+    margin-top: 50px;
+   }
+   .leftabout img {
+    margin-top: 50px;
+  }
+   .rightabout p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .rightabout div {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 50px;
+  }
+  .rightabout img {
+    margin-top: 50px;
+  }
+
+ /*Блок Advantages*/
+
+  .advantages h2 {  
+    font-size: 35px;
+    line-height: 36px; 
+  }
+  .advinfo {
+    margin-bottom: 90px;
+  }
+  .advinfo1 {
+    margin-top: 35px;
+    padding-top: 35px;
+    font-size: 23px;
+    line-height: 24px;
+  }
+  .advinfo2 {
+    margin-top: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .advinfo2 ol li:nth-child(odd) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .advinfo2 ol li:nth-child(even) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+   /*Блок IT squad in numbers*/
+
+  .ISiN h2 {
+    font-size: 35px;
+    line-height: 36px; 
+  }
+
+  .numbers {
+    margin-bottom: 90px;
+  }
+  
+  .num1 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+  }
+  .num1:nth-child(odd) {
+    text-align: end;
+  }
+  .num1 h3 {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  /*Блок Services*/
+
+  .services {
+    margin-bottom: 90px;
+  }
+  .services h2 {
+    font-size: 35px;
+    line-height: 36px;
+  }
+  .services p {
+    font-size: 23px;
+    line-height: 24px;
+  }
+  
+  .srvs {
+    width: 100vw;
+    margin-top: 50px;
+  }
+  .srvs li:nth-child(odd) {
+    font-size: 16px;
+    line-height: 13px;
+  }
+  .srvs li:nth-child(even) {
+    font-size: 16px;
+    line-height: 18px;
+    margin-left: 30px;
+    margin-top: 6px;
+    margin-bottom: 25px;
+  }
+
+  /*Блок StagesOfWork*/
+
+  .StagesOfWork {
+    margin-bottom: 90px;
+  }
+  .StagesOfWork h2 {
+    font-size: 35px;
+    line-height: 36px;
+  }
+  .StagesOfWork p {
+    font-size: 23px;
+    line-height: 24px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .stages {
+    margin-top: 50px;
+  }
+
+  .stages li:nth-child(odd) {
+    font-size: 16px;
+    line-height: 13px;
+  }
+  .stages li:nth-child(even) {
+    font-size: 16px;
+    line-height: 18px;
+    margin-left: 30px;
+    margin-top: 6px;
+    margin-bottom: 25px;
+  }
+
+  /*Блок The Team*/
+
+  .TheTeam {
+    margin-bottom: 90px;
+  }
+  .TheTeam h2 {
+    font-size: 35px;
+    line-height: 36px;
+  }
+
+  .teamcontainer {
+    margin-top: 50px;
+  }
+
+  .imgteam1 {
+    display: none;
+  }
+
+  .TheTeam .pteam1 {
+    font-size: 23px;
+    line-height: 24px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .TheTeam .pteam2 {
+    font-size: 23px;
+    line-height: 24px;
+  }
+  
+  /*Блок Our Customers*/
+
+  .OurCustomers {
+    margin-bottom: 90px;
+  }
+
+  .OurCustomers h2 {
+    font-size: 35px;
+    line-height: 36px;
+  }
+
+  .OurCustomers p {
+    font-size: 23px;
+    line-height: 24px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .link li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .i1 {
+    left: 43%;
+    top: -0.8%;
+  }
+  .i2 {
+    top: 17.35%;
+  }
+  .i3 {
+    left: 25%;
+    top: 35.6%;
+  }
+  .i4 {
+    left: 70%;
+    top: 53.8%;
+  }
+  .i5 {
+    top: 71.8%;
+  }
+  .i6 {
+    left: 45%;
+    top: 90%;
+  }
+  .customersimg {
+    max-width: 50%;
+    height: 80px;
+  }
+
+  /*Блок Footer*/
+
+.consultation {
+  margin-bottom: 90px;
+}
+.consultation h2 {
+  font-size: 35px;
+  line-height: 36px;
+  margin-bottom: 50px;
+}
+
+.contacts {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.contacts h2 {
+  font-size: 35px;
+  line-height: 36px;
+}
+
+.contacts p {
+  font-size: 23px;
+  line-height: 24px;
+  width: 40vw;
+  margin-bottom: 50px;
+}
+
+.adress {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 50px;
+}
+
+.adress .socialweb a:hover {
+  font-size: 14px;
+}
+
+.backlink a {
+  font-size: 14px;
+  line-height: 17px; 
+}
+.contacts a:hover {
+  font-size: 15px;
+}
+
+.footer .ending {
+  font-size: 12px;
+  line-height: 14px;
+}
+}
+@media screen and (max-width: 699px) {
+  /*Блок nav*/
+  .logo {
+    font-size: 20px;
+  }
+  
+  .nav .dropbtn {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    line-height: 2vw;
+  }
+
+  .dropbtn:hover {
+    border: 1px solid #BFE55E;
+  }
+
+  .dropbtn:active {
+    border: 1px solid #BFE55E;
+  }
+
+  .n {
+    display: none;
+    width: 20vw ;
+  }
+  .n1 {
+    font-size: 20px;
+    width: 150px;
+  }
+  
+  .location {
+    display: none;
+  } 
+  .name {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .name h1 {
+    font-size: 60px;
+  }
+  .name p {
+    font-size: 20px;
+    line-height: 25px;
+    width: 90vw;
+  }
+  
+   /*Блок About*/
+
+  .about {
+    display: block;
+    margin-top: 85px;
+    margin-bottom: 70px;
+  }
+
+  .leftabout {
+    width: 100%;
+  }
+  .leftabout h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .leftabout p {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 35px;
+  }
+  .leftabout img {
+    width: 100vw;
+    margin-top: 35px;
+  }
+
+  .rightabout {
+    width: 100%;
+    margin-top: 35px;
+  }
+  .rightabout p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .rightabout img {
+    width: 100vw;
+    margin-top: 35px;
+  }
+  .rightabout div {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 35px;
+  }
+
+ /*Блок Advantages*/
+
+  .advinfo {
+    display: block;
+    margin-bottom: 70px;
+  }
+  .advantages h2 {  
+    font-size: 30px;
+  }
+  .advinfo1 {
+    width: 100%;
+    margin-top: 35px;
+    padding-top: 35px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .advinfo2 {
+    width: 100%;
+    margin-top: 35px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .advinfo2 ol li:nth-child(odd) {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .advinfo2 ol li:nth-child(even) {
+    margin-left: 32px;
+    margin-top: 10px;
+  }
+
+  /*Блок IT squad in numbers*/
+
+  .ISiN h2 {
+    font-size: 30px; 
+  }
+
+  .numbers {
+    display: block;
+    margin-bottom: 70px;
+  }
+  
+  .num1 {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 35px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+  }
+  .num1:nth-child(odd) {
+    text-align:left;
+  }
+  .num1 h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+
+  /*Блок Services*/
+
+  .services {
+    display: block;
+    margin-bottom: 70px;
+  }
+  .services h2 {
+    font-size: 30px;
+  }
+  .services p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  
+  .srvs {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .srvs li:nth-child(odd) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .srvs li:nth-child(even) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /*Блок StagesOfWork*/
+
+  .StagesOfWork {
+    margin-bottom: 70px;
+  }
+  .StagesOfWork h2 {
+    font-size: 30px;
+  }
+  .StagesOfWork p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+  }
+
+  .stages {
+    display: block;
+    margin-top: 0;
+  }
+  .stages .li2 {
+    width: 100%;
+    border-top: none;
+    border-bottom: 1px solid #F3FFCE;
+  }
+
+  .stages li:nth-child(odd) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .stages li:nth-child(even) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /*Блок The Team*/
+
+  .TheTeam {
+    margin-bottom: 70px;
+  }
+  .TheTeam h2 {
+    font-size: 30px;
+  }
+
+  .teamcontainer {
+    margin-top: 35px;
+  }
+
+  .TheTeam .pteam1 {
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .TheTeam .pteam2 {
+    font-size: 20px;
+  }
+
+/*Блок Our Customers*/
+
+  .OurCustomers {
+    margin-bottom: 70px;
+  }
+
+  .OurCustomers h2 {
+    font-size: 30px;
+  }
+
+  .OurCustomers p {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+/*Блок Footer*/
+
+  .consultation {
+    margin-bottom: 70px;
+  }
+  .consultation h2 {
+    align-self: start;
+    width: 70vw;
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+  .contacts {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .contacts h2 {
+    font-size: 30px;
+  }
+
+  .contacts p {
+    font-size: 20px;
+    width: 100vw;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .adress {
+    display: block;
+    margin-bottom: 25px;
+  }
+  .adress ol {
+    padding-bottom: 10px;
+  }
+}
